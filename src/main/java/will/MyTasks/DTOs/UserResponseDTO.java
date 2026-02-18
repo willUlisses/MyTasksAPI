@@ -1,4 +1,4 @@
 package will.MyTasks.DTOs;
 
-public record UserResponseDTO() {
+public record UserResponseDTO(String email, String password) {
 }

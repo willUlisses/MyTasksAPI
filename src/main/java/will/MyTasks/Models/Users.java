@@ -30,13 +30,13 @@ public class Users implements UserDetails {
     private Long  id;
 
     @Column(unique = true, nullable = false, length = 50)
-    private final String username;
+    private String username;
 
     @Column(unique = false, nullable = false, length = 32)
-    private final String password;
+    private String password;
 
     @Column(unique = true, nullable = false, length = 120)
-    private final String email;
+    private String email;
 
     public Users(String username, String password, String email) {
         this.username = username;
@@ -47,7 +47,7 @@ public class Users implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(UserRoles.USER.getRole())); /* todos os usuários serão Usuários comuns,
-        não vai existir admin do sistema (por enquanto */
+        não vai existir admin do sistema (por enquanto) */
     }
 
     @Override
