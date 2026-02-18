@@ -5,6 +5,7 @@ target/
 !**/src/test/**/target/
 
 src/main/resources
+./src/main/java/will/MyTasks/Config
 
 ### STS ###
 .apt_generated
